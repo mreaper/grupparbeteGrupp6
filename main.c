@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "verkytg.h"
+#include "verktyg.h"
 
 static void skriv_meny(void)
 {
@@ -21,7 +21,7 @@ int main (void)
 	do
 	{
 		skriv_meny();
-		scnaf("%d", &val);
+		scanf("%d", &val);
 
 		switch (val)
 		{
@@ -29,16 +29,16 @@ int main (void)
 				{
 					double celsius;
 					printf("Ange temperatur i Celsius: ");
-					scnaf("%lf", &celsius);
+					scanf("%lf", &celsius);
 					printf("%.2f C = %.2f F\n", 
-							celcius, celcius_till_fahrenheit(celsius));
+							celsius, celsius_till_fahrenheit(celsius));
 					break;
 				}
 			case 2:
 				{
 					double bredd, hojd;
 					printf("Ange bredd och hojd: ");
-					scanf"%lf %lf, &bredd, &hojd);
+					scanf("%lf %lf, &bredd, &hojd");
 					printf("Arean ar %.2f\n", rektangelarea(bredd, hojd));
 					break;
 				}
@@ -64,7 +64,7 @@ int main (void)
 				}
 			case 5:
 				{
-					itn fran, till;
+					int fran, till;
 					printf("Ange start och slut (t.ex. 1 20): ");
 					scanf("%d %d", &fran, &till);
 					skriv_fizzbuzz(fran, till);

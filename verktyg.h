@@ -1,7 +1,7 @@
 #ifndef VERKTYG_H
 #define VERKTYG_H
 
-double celsuis_till_farenheit(double celsius);
+double celsius_till_fahrenheit(double celsius);
 double rektangelarea(double bredd, double hojd);
 void skriv_multiplikationstabell(int tal);
 int ar_primtal(int tal);
