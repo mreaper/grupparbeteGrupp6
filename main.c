@@ -38,7 +38,7 @@ int main (void)
 				{
 					double bredd, hojd;
 					printf("Ange bredd och hojd: ");
-					scanf("%lf %lf, &bredd, &hojd");
+					scanf("%lf %lf", &bredd, &hojd);
 					printf("Arean ar %.2f\n", rektangelarea(bredd, hojd));
 					break;
 				}
