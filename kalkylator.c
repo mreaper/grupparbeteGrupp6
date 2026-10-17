@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+double berakna(double a, double b, char operatortecken)
+{
+    switch (operatortecken)
+    {
+    case '+':
+        return a + b;
+        break;
+    case '-':
+        return a - b;
+        break;
+    case '*':
+        return a * b;
+        break;
+    case '/':
+        if (b == 0)
+            printf("Error: Can't divide by 0.\n");
+        else
+            return a / b;        
+        break;
+    default:
+        printf("Error: No valid operator.\n");
+        break;
+    }
+    return 0;
+}
