@@ -11,3 +11,12 @@ void skriv_multiplikationstabell(int tal)
 
 	}
 }
+
+
+void skriv_flera_tabeller(int tal[], int antal)
+{
+	for (int i = 0; i < antal; i++)
+	{
+		skriv_multiplikationstabell(tal[i]);
+	}
+}
