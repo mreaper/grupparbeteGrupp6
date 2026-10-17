@@ -11,5 +11,6 @@ double berakna(double a, double b, char operatortecken);
 void skriv_flera_tabeller(int tal[], int antal);
 int raknar_primtal_i_array(int tal[], int antal);
 void konvertera_matningar(double matningar[], int antal);
+void storsta_rektangel(double bredder[], double hojder[], int antal, double *storsta_area_ut, int *index_ut);
 
 #endif
