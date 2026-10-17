@@ -76,7 +76,7 @@ int main (void)
 					char operatortecken;
 					printf("Ange uttryck, t.ex. \"4 + 2\": ");
 					scanf("%lf %c %lf", &a, &operatortecken, &b);
-					printf("Resultat: .2f\n", berakna(a, b, operatortecken));
+					printf("Resultat: %.2f\n", berakna(a, b, operatortecken));
 					break;
 				}
 			case 0:
