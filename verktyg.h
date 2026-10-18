@@ -7,10 +7,11 @@ void skriv_multiplikationstabell(int tal);
 int ar_primtal(int tal);
 void skriv_fizzbuzz(int fran, int till);
 double berakna(double a, double b, char operatortecken);
+void fizzbuzz_sammanfattning(int fran, int till, char *sammanfattning);
+void byt_plats(double *a, double *b);
 
+void konvertera_matningar(double matningar[], int antal);
 void skriv_flera_tabeller(int tal[], int antal);
 int raknar_primtal_i_array(int tal[], int antal);
-void konvertera_matningar(double matningar[], int antal);
 void storsta_rektangel(double bredder[], double hojder[], int antal, double *storsta_area_ut, int *index_ut);
-
 #endif

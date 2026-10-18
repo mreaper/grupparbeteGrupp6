@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "verktyg.h"
 
 double berakna(double a, double b, char operatortecken)
 {
@@ -24,4 +25,11 @@ double berakna(double a, double b, char operatortecken)
         break;
     }
     return 0;
+}
+
+void byt_plats(double *a, double *b)
+{
+    double temp = *a;
+    *a = *b;
+    *b = temp;
 }
