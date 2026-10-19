@@ -10,6 +10,8 @@ static void skriv_meny(void)
 	printf("4. Kontrollera om ett tal ar ett primtal\n");
 	printf("5. FizzBuzz for ett intervall\n");
 	printf("6. Enkel rakning (+, -, *- /)\n");
+	printf("9. Flera multiplikationstabeller\n");
+	printf("10. Rakna primtal ien lista\n");
 	printf("11. FizzBuzz-sammanfattning\n");
 	printf("12. Byt plats pa tva tal\n");
 	printf("0. Avsluta\n");
@@ -79,6 +81,38 @@ int main (void)
 					printf("Ange uttryck, t.ex. \"4 + 2\": ");
 					scanf("%lf %c %lf", &a, &operatortecken, &b);
 					printf("Resultat: %.2f\n", berakna(a, b, operatortecken));
+					break;
+				}
+			case 9:
+				{
+					int tal[20];
+					int antal;
+
+					printf("Hur manga tabeller vill du skriva ut (max 20)?. ");
+					scanf("%d", &antal);
+					for (int i = 0; i < antal; i++)
+					{
+						printf("Tal %d: ", i + 1);
+						scanf("%d", &tal[i]);
+					}
+
+					skriv_flera_tabeller(tal, antal);
+					break;
+				}
+			case 10:
+				{
+					int tal[20];
+					int antal;
+
+					printf("Hur manga tal vill du kontrollera (max 20)?. ");
+					scanf("%d", &antal);
+					for (int i = 0; i < antal; i++)
+					{
+						printf("Tal %d: ", i + 1);
+						scanf("%d", &tal[i]);
+					}
+
+					printf("Antal primtal: %d\n", raknar_primtal_i_array(tal, antal));
 					break;
 				}
 			case 11:
