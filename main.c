@@ -10,6 +10,8 @@ static void skriv_meny(void)
 	printf("4. Kontrollera om ett tal ar ett primtal\n");
 	printf("5. FizzBuzz for ett intervall\n");
 	printf("6. Enkel rakning (+, -, *- /)\n");
+	printf("7. Konvertera flera temperaturer\n");
+	printf("8. Hitta storsta rektangeln\n");
 	printf("9. Flera multiplikationstabeller\n");
 	printf("10. Rakna primtal ien lista\n");
 	printf("11. FizzBuzz-sammanfattning\n");
@@ -85,6 +87,45 @@ int main (void)
 					printf("Ange uttryck, t.ex. \"4 + 2\": ");
 					scanf("%lf %c %lf", &a, &operatortecken, &b);
 					printf("Resultat: %.2f\n", berakna(a, b, operatortecken));
+					break;
+				}
+			case 7:
+				{
+					double matningar[20];
+					int antal;
+
+					printf("Hur manga temperaturer (max 20)? ");
+					scanf("%d", &antal);
+					for (int i = 0; i < antal; i++)
+					{
+						printf("Temperatur %d (C): ", i + 1);
+						scanf("%lf", &matningar[i]);
+					}
+
+					konvertera_matningar(matningar, antal);
+					for (int i = 0; i < antal; i++)
+					{
+						printf("%.2f F\n", matningar[i]);
+					}
+					break;
+				}
+			case 8:
+				{
+					double bredder[20], hojder[20];
+					double storsta_area;
+					int index;
+					int antal;
+
+					printf("Hur manga rektanglar (max 20)? ");
+					scanf("%d", &antal);
+					for (int i = 0; i < antal; i++)
+					{
+						printf("Rektangel %d, bredd och hojd: ", i + 1);
+						scanf("%lf %lf", &bredder[i], &hojder[i]);
+					}
+
+					storsta_rektangel(bredder, hojder, antal, &storsta_area, &index);
+					printf("Storst ar rektangel %d med arean %.2f\n", index + 1, storsta_area);
 					break;
 				}
 			case 9:
