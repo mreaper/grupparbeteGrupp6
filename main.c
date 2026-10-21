@@ -15,6 +15,7 @@ static void skriv_meny(void)
 	printf("11. FizzBuzz-sammanfattning\n");
 	printf("12. Byt plats pa tva tal\n");
 	printf("13. Lagg till en matning i matloggen\n");
+	printf("14. Ta bort senaste matningen\n");
 	printf("0. Avsluta\n");
 	printf("Val: ");
 }
@@ -151,10 +152,16 @@ int main (void)
 					printf("Matloggen inehaller nu %d matnig(ar).\n", matlogg_antal);
 					break;
 				}
+			case 14:
+				{
+					matlogg = ta_bort_senaste_matning(matlogg, &matlogg_antal);
+					printf("Maloggen inehaller nu %d matning(ar).\n", matlogg_antal);
+					break;
+				}
 			case 0:
 				if (matlogg != NULL)
 				{
-					frigor_matlogg(matlogg);
+					// frigor_matlogg(matlogg);
 					matlogg = NULL;
 					matlogg_antal = 0;
 				}

@@ -14,4 +14,7 @@ void konvertera_matningar(double matningar[], int antal);
 void skriv_flera_tabeller(int tal[], int antal);
 int raknar_primtal_i_array(int tal[], int antal);
 void storsta_rektangel(double bredder[], double hojder[], int antal, double *storsta_area_ut, int *index_ut);
+
+double *lagg_till_matning(double *logg, int *antal, double varde);
+double *ta_bort_senaste_matning(double *logg, int *antal);
 #endif
