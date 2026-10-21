@@ -17,4 +17,6 @@ void storsta_rektangel(double bredder[], double hojder[], int antal, double *sto
 
 double *lagg_till_matning(double *logg, int *antal, double varde);
 double *ta_bort_senaste_matning(double *logg, int *antal);
+void berakna_loggstatistik(double *logg, int antal, double *min_ut, double *max_ut, double *medel_ut);
+void frigor_matlogg(double *logg);
 #endif
