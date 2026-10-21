@@ -211,7 +211,7 @@ int main (void)
 					printf("Min: %.2f, Max: %.2f, Medel: %.2f\n", min, max, medel);
 					break;
 				}
-				
+
 			case 18:
 				{
 					frigor_matlogg(matlogg);
@@ -223,7 +223,7 @@ int main (void)
 			case 0:
 				if (matlogg != NULL)
 				{
-					// frigor_matlogg(matlogg);
+					frigor_matlogg(matlogg);
 					matlogg = NULL;
 					matlogg_antal = 0;
 				}
