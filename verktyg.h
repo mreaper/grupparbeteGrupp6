@@ -26,4 +26,7 @@ void skriv_matlogg(double *logg, int antal);
 void berakna_loggstatistik(double *logg, int antal, double *min_ut, double *max_ut, double *medel_ut);
 double* kopiera_matlogg(double *logg, int antal);
 void frigor_matlogg(double *logg);
+
+int hitta_sensor(Sensormatning *sensorregister, int antal, char *namn);
+void spara_sensorregister(char *filnamn, Sensormatning *sensorregister, int antal);
 #endif
