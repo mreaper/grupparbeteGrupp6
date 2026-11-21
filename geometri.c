@@ -2,7 +2,8 @@
 #include "verktyg.h"
 double rektangelarea(double bredd, double hojd)
 {
-    return bredd * hojd;
+    double area = bredd * hojd;
+    return area;
 }
 
 void storsta_rektangel(double bredder[], double hojder[], int antal, double *storsta_area_ut, int *index_ut)
