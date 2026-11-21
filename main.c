@@ -284,6 +284,7 @@ int main (void)
 					printf("Filnamn att spara till: ");
 					scanf("%99s", filnamn);
 					spara_sensorregister(filnamn, sensorregister, sensorregister_antal);
+					printf("Sensorregistret sparat till %s. \n", filnamn);
 					break;	
 				}
 			case 0:

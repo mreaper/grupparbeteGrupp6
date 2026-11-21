@@ -13,7 +13,7 @@ void spara_sensorregister(char *filnamn, Sensormatning *sensorregister, int anta
 
     for (int i = 0; i < antal; i++)
     {
-        fprintf(fil, "%s %.2f\n");
+        fprintf(fil, "%s %.2f\n", sensorregister[i].namn, sensorregister[i].varde);
     }
     fclose(fil);
 }
