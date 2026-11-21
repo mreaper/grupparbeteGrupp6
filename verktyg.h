@@ -30,4 +30,6 @@ void frigor_matlogg(double *logg);
 Sensormatning *lagg_till_sensormatning(Sensormatning *reg, int *antal,
 		const char *namn, double varde);
 void skriv_sensorregister(Sensormatning *reg, int antal);
+int hitta_sensor(Sensormatning *sensorregister, int antal, char *namn);
+void spara_sensorregister(char *filnamn, Sensormatning *sensorregister, int antal);
 #endif
