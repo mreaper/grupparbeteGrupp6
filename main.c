@@ -272,7 +272,7 @@ int main (void)
 					printf("Vilket namn vill du soka efter? ");
 					scanf("%49s", namn);
 					int index = hitta_sensor(sensorregister, sensorregister_antal, namn);
-					if (index == 1) {
+					if (index == -1) {
 						printf("Hittade ingen sensor med namnet \"%s\".\n", namn);
 					} else {
 						printf("Hittade \"%s\" pa plats %d, varde %.2f\n",
