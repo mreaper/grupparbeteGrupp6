@@ -8,7 +8,6 @@ void skriv_multiplikationstabell(int tal)
 		int res = tal * i;
 		printf("%d * %d = ", tal, i);
 		printf("%d\n", res);
-
 	}
 }
 
