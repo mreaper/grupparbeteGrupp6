@@ -32,6 +32,8 @@ Sensormatning *lagg_till_sensormatning(Sensormatning *reg, int *antal,
 		const char *namn, double varde);
 void skriv_sensorregister(Sensormatning *reg, int antal);
 int hitta_sensor(Sensormatning *sensorregister, int antal, char *namn);
+double medelvarde_sensorregister(Sensormatning *reg, int antal);
 void spara_sensorregister(char *filnamn, Sensormatning *sensorregister, int antal);
+Sensormatning *lasa_sensorregister(const char *filnamn, int *antal_ut);
 #endif
 
