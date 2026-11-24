@@ -17,7 +17,7 @@ double *ta_bort_senaste_matning(double *logg, int *antal)
 		else
 		{
 			double *ny_logg;
-			ny_logg = realloc(logg, (*antal - 1) * sizeof(double));
+			ny_logg = (double *)realloc(logg, (*antal - 1) * sizeof(double));
 			
 			if (ny_logg == NULL){printf("realloc failed\n"); return logg;}
 			else

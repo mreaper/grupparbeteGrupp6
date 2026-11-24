@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <iostream>
+#include <iomanip>
 #include "verktyg.h"
 
 static void skriv_meny(void)
@@ -88,8 +90,8 @@ int main (void)
 			case 5:
 				{
 					int fran, till;
-					printf("Ange start och slut (t.ex. 1 20): ");
-					scanf("%d %d", &fran, &till);
+					std::cout << "Ange start och slut (t.ex. 1 20): ";
+					std::cin >> fran >> till;
 					skriv_fizzbuzz(fran, till);
 					break;
 				}
@@ -177,24 +179,24 @@ int main (void)
 				{
 					int fran, till;
 					char sammanfattning[100];
-					
-					printf("Ange start och slut (t.ex. 1 20): ");
-					scanf("%d %d", &fran, &till);
+
+					std::cout << "Ange start och slut (t.ex. 1 20): ";
+					std::cin >> fran >> till;
 					
 					fizzbuzz_sammanfattning(fran, till, sammanfattning);
-					printf("%s\n", sammanfattning);
+					std::cout << sammanfattning << "\n";
 					break;
 				}
 			case 12:
 				{
 					double a, b;
 
-					printf("Ange tva tal, t.ex. \"3 7\": ");
-					scanf("%lf %lf", &a, &b);
+					std::cout << "Ange tva tal, t.ex. \"3 7\": ";
+					std::cin >> a >> b;
 
-					printf("Fore: a = %.2f, b = %.2f\n", a, b);
-					byt_plats(&a, &b);
-					printf("Efter: a = %.2f, b = %.2f\n", a, b);
+					std::cout << "Fore: a = " << std::setprecision(3) << a << ", b = " << std::setprecision(3) << b << "\n";
+					byt_plats(a, b);
+					std::cout << "Efter: a = " << std::setprecision(3) << a << ", b = " << std::setprecision(3) << b << "\n";
 					break;
 				}
 			case 13:
@@ -228,10 +230,10 @@ int main (void)
 				{
 					int kopia_antal = matlogg_antal;
 					double *kopia = kopiera_matlogg(matlogg, matlogg_antal);
-					printf("Kopierade %d matning(ar) till en ny logg:\n", kopia_antal);
+					std::cout << "Kopierade " << kopia_antal << " matning(ar) till en ny logg:\n";
 					skriv_matlogg(kopia, kopia_antal);
 					frigor_matlogg(kopia);
-					printf("(Kopian ar nu frigjord igen -- den var bara for testet.)\n");
+					std::cout << "(Kopian ar nu frigjord igen -- den var bara for testet.)\n";
 					break;
 				}
 			case 18:
@@ -269,24 +271,23 @@ int main (void)
 			case 22:
 				{
 					char namn[50];
-					printf("Vilket namn vill du soka efter? ");
+					std::cout << "Vilket namn vill du soka efter? ";
 					scanf("%49s", namn);
 					int index = hitta_sensor(sensorregister, sensorregister_antal, namn);
 					if (index == -1) {
-						printf("Hittade ingen sensor med namnet \"%s\".\n", namn);
+						std::cout << "Hittade ingen sensor med namnet \"" << namn << "\".\n";
 					} else {
-						printf("Hittade \"%s\" pa plats %d, varde %.2f\n",
-						namn, index, sensorregister[index].varde);
+						std::cout << "Hittade \"" << namn << "\" pa plats " << index << ", varde " << std::setprecision(3) << sensorregister[index].varde << "\n";
 					}					
 					break;
 				}
 			case 23:
 				{
 					char filnamn[100];
-					printf("Filnamn att spara till: ");
+					std::cout << "Filnamn att spara till: ";
 					scanf("%99s", filnamn);
 					spara_sensorregister(filnamn, sensorregister, sensorregister_antal);
-					printf("Sensorregistret sparat till %s. \n", filnamn);
+					std::cout << "Sensorregistret sparat till " << filnamn << ". \n";
 					break;	
 				}
 			case 24:

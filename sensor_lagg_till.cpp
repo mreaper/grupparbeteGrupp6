@@ -8,8 +8,8 @@ Sensormatning *lagg_till_sensormatning(Sensormatning *reg, int *antal,
 {
 	Sensormatning *ny_reg;
 
-	if (reg == NULL){ny_reg = malloc(sizeof(Sensormatning));}
-	else {ny_reg = realloc(reg, (*antal + 1) * sizeof(Sensormatning));}
+	if (reg == NULL){ny_reg = (Sensormatning *)malloc(sizeof(Sensormatning));}
+	else {ny_reg = (Sensormatning *)realloc(reg, (*antal + 1) * sizeof(Sensormatning));}
 
 	if (ny_reg == NULL){printf("Kunde inte allokera minne for sensorregistret.\n"); return reg;}
 	else
