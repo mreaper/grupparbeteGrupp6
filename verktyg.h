@@ -13,7 +13,7 @@ int ar_primtal(int tal);
 void skriv_fizzbuzz(int fran, int till);
 double berakna(double a, double b, char operatortecken);
 void fizzbuzz_sammanfattning(int fran, int till, char *sammanfattning);
-void byt_plats(double *a, double *b);
+void byt_plats(double &a, double &b);
 
 void konvertera_matningar(double matningar[], int antal);
 void skriv_flera_tabeller(int tal[], int antal);
