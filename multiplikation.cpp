@@ -1,13 +1,13 @@
 #include "verktyg.h"
 #include <stdio.h>
+#include <iostream>
 
 void skriv_multiplikationstabell(int tal)
 {
 	for (int i = 1; i <= 10; i++)
 	{
 		int res = tal * i;
-		printf("%d * %d = ", tal, i);
-		printf("%d\n", res);
+		std::cout << tal << " x " << i << " = " << (tal * i) << "\n";
 	}
 }
 
